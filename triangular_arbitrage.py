@@ -19,7 +19,7 @@ exchange_markets = exchange.load_markets()
 start_balance = 1000
 maker_fee = 0.26 / 100  # TODO use real fee maker fee, market order
 CACHE_PAIRS = False
-USE_LAST_PRICE_FOR_CALC = True # if True using last price in the exchange, else if False using bid/ask prices
+USE_LAST_PRICE_FOR_CALC = False # if True using last price in the exchange, else if False using bid/ask prices
 
 class Arbitrage():
     percent = 0
