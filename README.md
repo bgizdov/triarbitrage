@@ -17,3 +17,8 @@ arbitrage opportunity to be filled very fast.
 `python3 triangular_arbitrage.py`
 
 
+#### Screenshots
+
+![Two exchanges arbitrage](https://github.com/bgizdov/triarbitrage/blob/master/images/2arb.png?raw=true)
+
+![Triangular arbitrage](https://github.com/bgizdov/triarbitrage/blob/master/images/3arb.png?raw=true)
