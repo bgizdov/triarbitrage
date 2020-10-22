@@ -164,12 +164,13 @@ def find_all_pairs(filter_pair1=[], filter_pair2 = []):
                              'pair3': {'name': pair3, 'buy': buy3}}
                 all_pairs.append(tri_pairs)
     save_obj('cache', all_pairs)
+    return all_pairs
 
 def demo(screen, all_arbitrages):
-    if not os.path.exists("cache.json") and not CACHE_PAIRS:
-        find_all_pairs()
-
-    pairs = read_obj('cache')
+    if not os.path.exists("cache.json") or not CACHE_PAIRS:
+        pairs = find_all_pairs()
+    else:
+        pairs = read_obj('cache')
     for tri_pairs in pairs:
         new_arb = calculate_triangular_arbitrage(tri_pairs)
         time.sleep(0.1)
